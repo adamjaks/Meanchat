@@ -1,0 +1,8 @@
+//mixins
+
+@function rem-calc($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+h1 { font-size: rem-calc(24); }

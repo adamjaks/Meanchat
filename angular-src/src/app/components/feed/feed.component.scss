@@ -1,0 +1,7 @@
+.card-content span { padding: .1rem .5rem; font-size: .8rem; text-transform: uppercase; }
+.card-panel { position: relative;
+  &:after { content: ''; display: block; width: 0; height: 0;
+    border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid white;
+    position: absolute; right: -10px; bottom: 10px; }
+  &.own:after { border-left: none; border-right: 10px solid white; left: -10px; right: auto; }
+}
