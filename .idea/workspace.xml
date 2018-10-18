@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="198f9fb2-00bb-4341-8c26-14fb469c92a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/scss/_posts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-src/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/user-profile/user-profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/user-profile/user-profile.component.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +18,7 @@
     <session id="859460813">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.opened" value="3" />
@@ -31,7 +29,7 @@
           <entry key="html" value="8" />
           <entry key="js" value="6" />
           <entry key="json" value="4" />
-          <entry key="scss" value="5" />
+          <entry key="scss" value="10" />
           <entry key="ts" value="4" />
         </counts>
       </usages-collector>
@@ -40,7 +38,7 @@
           <entry key="HTML" value="8" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="6" />
-          <entry key="SCSS" value="5" />
+          <entry key="SCSS" value="10" />
           <entry key="TypeScript" value="4" />
         </counts>
       </usages-collector>
@@ -49,7 +47,7 @@
           <entry key="html" value="2169" />
           <entry key="js" value="3873" />
           <entry key="json" value="155" />
-          <entry key="scss" value="2449" />
+          <entry key="scss" value="2539" />
           <entry key="ts" value="207" />
         </counts>
       </usages-collector>
@@ -58,7 +56,7 @@
           <entry key="HTML" value="2169" />
           <entry key="JSON" value="155" />
           <entry key="JavaScript" value="3873" />
-          <entry key="SCSS" value="2449" />
+          <entry key="SCSS" value="2539" />
           <entry key="TypeScript" value="207" />
         </counts>
       </usages-collector>
@@ -74,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            <state>
+              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -92,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -108,28 +106,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" selection-start-column="36" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -155,11 +135,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/user-profile/user-profile.component.scss">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/scss/_posts.scss">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -205,16 +203,18 @@
         <option value="$PROJECT_DIR$/angular-src/package.json" />
         <option value="$PROJECT_DIR$/angular-src/package-lock.json" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/app.component.scss" />
         <option value="$PROJECT_DIR$/angular-src/src/index.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.scss" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/user-profile/user-profile.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/app.component.scss" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/posts.scss" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/user-profile/user-profile.component.scss" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/scss/_posts.scss" />
       </list>
     </option>
   </component>
@@ -285,26 +285,7 @@
               <item name="angular-src" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Meanchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Meanchat" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Meanchat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Meanchat" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="user-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Meanchat" type="b2602c69:ProjectViewProjectNode" />
@@ -326,6 +307,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\ajaks\Desktop\Meanchat\angular-src\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ajaks\Desktop\Meanchat\angular-src\src\app\scss" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ajaks\Desktop\Meanchat\angular-src\src\app" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -351,12 +340,12 @@
       <updated>1539685772910</updated>
       <workItem from="1539685774058" duration="31131000" />
       <workItem from="1539847772067" duration="45000" />
-      <workItem from="1539847833133" duration="13074000" />
+      <workItem from="1539847833133" duration="15280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44250000" />
+    <option name="totallyTimeSpent" value="46456000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,13 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -502,6 +484,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="6" lean-forward="true" selection-start-line="9" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -514,29 +503,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="41" column="6" lean-forward="true" selection-start-line="9" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -547,10 +515,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/posts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/feed/feed.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/user-profile/user-profile.component.scss">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/scss/_posts.scss">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
         </state>
       </provider>
     </entry>
