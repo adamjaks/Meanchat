@@ -1,9 +1,9 @@
 <nav class="white">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo teal-text">Meanchat</a>
+        <a [routerLink]="['/']" class="brand-logo deep-orange-text">Meanchat</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html" class="teal-text"><i class="material-icons left">person</i>Profile</a></li>
-            <li><a href="sass.html" class="teal-text"><i class="material-icons left">logout</i>Logout</a></li>
+            <li><a [routerLink]="['/profile']" class="deep-orange-text"><i class="material-icons left">person</i>Profile</a></li>
+            <li><a [routerLink]="['/']" class="deep-orange-text"><i class="material-icons left">logout</i>Logout</a></li>
         </ul>
     </div>
 </nav>

@@ -1,7 +1,21 @@
-.card-content span { padding: .1rem .5rem; font-size: .8rem; text-transform: uppercase; }
-.card-panel { position: relative;
-  &:after { content: ''; display: block; width: 0; height: 0;
-    border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid white;
-    position: absolute; right: -10px; bottom: 10px; }
-  &.own:after { border-left: none; border-right: 10px solid white; left: -10px; right: auto; }
+form { margin-top: 2rem; }
+.input-field { border-color: #ff5722;
+  textarea { border-color: #ff5722;
+    &:focus { border-color: #ff5722; box-shadow: 0 1px 0 0 #ff5722; }
+  }
+}
+.card-panel { position: relative; margin: 2.4rem 0;
+  &.first { margin-top: 0; }
+}
+.author-avatar { width: 120px; height: 120px;
+  float: left; background-size: cover; background-position: center; position: absolute; left: 0; top: 0;
+  background-repeat: no-repeat;
+  &.own { border: 2px solid #ff8a65; }
+}
+.author-fullname { font: { size: .9rem; weight: 700; }}
+.teaser { padding: 0; margin: 0; font-size: .9rem; }
+.post-date { font: { size: .8rem; } }
+.management-menu { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+.option-btn { width: 36px; height: 36px; text-align: center; position: relative;
+  i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 }
