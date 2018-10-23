@@ -1,0 +1,25 @@
+<div class="row">
+    <form class="col s12" (submit)="onRegisterSubmit()">
+        <div class="row">
+            <div class="input-field col s6 deep-orange-text">
+                <input id="name" type="text" [(ngModel)]="name" name="name">
+                <label for="password" class="deep-orange-text">Name</label>
+            </div>
+            <div class="input-field col s6 deep-orange-text">
+                <input id="username" type="text" [(ngModel)]="username" name="username">
+                <label for="username" class="deep-orange-text">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 deep-orange-text">
+                <input id="email" type="email" [(ngModel)]="email" name="email">
+                <label for="email" class="deep-orange-text">Email</label>
+            </div>
+            <div class="input-field col s6 deep-orange-text">
+                <input id="password" type="password" [(ngModel)]="password" name="password">
+                <label for="password" class="deep-orange-text">Password</label>
+            </div>
+        </div>
+        <button type="submit" class="btn grey darken-4 white-text">Register</button>
+    </form>
+</div>

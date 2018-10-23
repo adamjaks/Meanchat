@@ -7,10 +7,15 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {FeedComponent} from './components/feed/feed.component';
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ValidationService } from './services/validation.service';
 
 const appRoutes: Routes = [
     {path: '', component: FeedComponent},
-    {path: 'profile', component: UserProfileComponent}
+    {path: 'profile', component: UserProfileComponent},
+    {path: 'post', component: PostDetailsComponent},
+    {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
@@ -20,7 +25,8 @@ const appRoutes: Routes = [
         NavbarComponent,
         FeedComponent,
         UserProfileComponent,
-        UserProfileComponent
+        PostDetailsComponent,
+        RegisterComponent
     ],
     imports: [
         BrowserModule,
@@ -28,7 +34,7 @@ const appRoutes: Routes = [
         HttpModule,
         RouterModule.forRoot(appRoutes)
 ],
-providers: [],
+providers: [ ValidationService ],
     bootstrap
 :
 [AppComponent]

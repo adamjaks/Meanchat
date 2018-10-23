@@ -1,0 +1,6 @@
+form { margin-top: 2rem; }
+.input-field { border-color: #ff5722;
+  textarea, input { border-color: #ff5722;
+    &:focus { border-color: #ff5722; box-shadow: 0 1px 0 0 #ff5722; }
+  }
+}
