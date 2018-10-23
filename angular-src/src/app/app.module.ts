@@ -10,12 +10,15 @@ import {UserProfileComponent} from './components/user-profile/user-profile.compo
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ValidationService } from './services/validation.service';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
     {path: '', component: FeedComponent},
     {path: 'profile', component: UserProfileComponent},
     {path: 'post', component: PostDetailsComponent},
-    {path: 'register', component: RegisterComponent}
+    {path: 'register', component: RegisterComponent},
+    {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
@@ -26,7 +29,8 @@ const appRoutes: Routes = [
         FeedComponent,
         UserProfileComponent,
         PostDetailsComponent,
-        RegisterComponent
+        RegisterComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
@@ -34,7 +38,7 @@ const appRoutes: Routes = [
         HttpModule,
         RouterModule.forRoot(appRoutes)
 ],
-providers: [ ValidationService ],
+providers: [ ValidationService, AuthService ],
     bootstrap
 :
 [AppComponent]
