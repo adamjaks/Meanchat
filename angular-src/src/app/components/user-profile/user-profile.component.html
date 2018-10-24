@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col s3">
+    <div *ngIf="user" class="col s3">
         <div class="card-panel">
             <ul>
-                <li>Name: <span>Adam Jaks</span></li>
-                <li>Username: <span>adamjaks</span></li>
-                <li>Email: <span>adamjaks@gmail.com</span></li>
+                <li>Name: <span>{{ user.name }}</span></li>
+                <li>Username: <span>{{ user.username }}</span></li>
+                <li>Email: <span>{{ user.email }}</span></li>
                 <li>Post amount: <span>11</span></li>
             </ul>
         </div>

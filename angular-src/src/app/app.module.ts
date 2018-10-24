@@ -11,11 +11,12 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
 import { RegisterComponent } from './components/register/register.component';
 import { ValidationService } from './services/validation.service';
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
     {path: '', component: FeedComponent},
-    {path: 'profile', component: UserProfileComponent},
+    {path: 'profile', component: UserProfileComponent, canActivate: [AuthGuardService]},
     {path: 'post', component: PostDetailsComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'login', component: LoginComponent}
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
         HttpModule,
         RouterModule.forRoot(appRoutes)
 ],
-providers: [ ValidationService, AuthService ],
+providers: [ ValidationService, AuthService, AuthGuardService ],
     bootstrap
 :
 [AppComponent]
