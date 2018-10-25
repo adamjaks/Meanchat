@@ -20,6 +20,8 @@ const app = express();
 
 const users = require('./routes/users');
 
+const posts = require('./routes/posts');
+
 const port = process.env.PORT || '3000';
 
 app.use(cors());
@@ -35,6 +37,8 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 
+app.use('/posts', posts);
+
 app.get('/', (req, res) => {
     res.send('Invalid endpoint');
 });
@@ -46,5 +50,8 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
    console.log(`Server started on port ${port}`);
 });
+
+
+
 
 

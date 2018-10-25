@@ -1,42 +1,21 @@
-<form>
-    <div class="row">
-        <div class="input-field col s12 deep-orange-text">
-            <textarea id="textarea2" class="materialize-textarea" data-length="280"></textarea>
-            <label for="textarea2" class="deep-orange-text">Add new post</label>
-        </div>
-    </div>
-</form>
+<app-add-post *ngIf="authService.loggedIn()"></app-add-post>
 
-<div class="card-panel first">
+<div *ngFor="let post of posts" class="card-panel first"
+     [ngClass]="{'deep-orange lighten-2 white-text' : post.creator_username === loggedUser}">
     <div class="post-details">
-        <div class="author-fullname">John Doe</div>
-        <p class="teaser">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia qui,
-            voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi quia
-            repudiandae voluptatem...
-        </p>
-        <span class="post-date deep-orange-text text-lighten-1">
-            2 weeks ago
-        </span>
+        <div class="author-fullname">{{ post.creator_username }}</div>
+        <p class="teaser">{{ post.content }}</p>
+        <span class="post-date deep-orange-text text-lighten-1">2 weeks ago</span>
     </div>
+    <ng-container *ngIf="post.creator_username === loggedUser">
+        <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
+            <i class="material-icons">delete</i>
+        </a>
+        <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
+            <i class="material-icons">settings</i>
+        </a>
+    </ng-container>
     <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
-        <i class="material-icons">add</i>
-    </a>
-</div>
-
-<div class="card-panel">
-    <div class="post-details">
-        <div class="author-fullname">Jenny Doe</div>
-        <p class="teaser">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia qui,
-            voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi quia
-            repudiandae voluptatem...
-        </p>
-        <span class="post-date deep-orange-text text-lighten-1">
-            2 weeks ago
-        </span>
-    </div>
-    <a [routerLink]="['/post']" class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
         <i class="material-icons">add</i>
     </a>
 </div>
@@ -55,20 +34,20 @@
     <!--</div>-->
 <!--</div>-->
 
-<div class="card-panel deep-orange lighten-2 white-text">
-    <div class="post-details">
-        <div class="author-fullname">Ann Smith</div>
-        <p class="teaser">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia qui,
-            voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi quia
-            repudiandae voluptatem...
-        </p>
-        <span class="post-date">
-            2 weeks ago
-        </span>
-    </div>
-    <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
-        <i class="material-icons">add</i>
-    </a>
-</div>
+<!--<div class="card-panel deep-orange lighten-2 white-text">-->
+    <!--<div class="post-details">-->
+        <!--<div class="author-fullname">Ann Smith</div>-->
+        <!--<p class="teaser">-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia qui,-->
+            <!--voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi quia-->
+            <!--repudiandae voluptatem...-->
+        <!--</p>-->
+        <!--<span class="post-date">-->
+            <!--2 weeks ago-->
+        <!--</span>-->
+    <!--</div>-->
+    <!--<a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">-->
+        <!--<i class="material-icons">add</i>-->
+    <!--</a>-->
+<!--</div>-->
 

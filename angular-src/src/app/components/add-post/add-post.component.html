@@ -1,0 +1,9 @@
+<form (submit)="onAddPostSubmit()">
+    <div class="row">
+        <div class="input-field col s12 deep-orange-text">
+            <textarea id="textarea2" [(ngModel)]="content" name="content" class="materialize-textarea" data-length="280"></textarea>
+            <label for="textarea2" class="deep-orange-text">Add new post</label>
+        </div>
+    </div>
+    <button type="submit" class="btn grey darken-4 white-text">Add</button>
+</form>

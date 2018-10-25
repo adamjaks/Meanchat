@@ -12,7 +12,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { ValidationService } from './services/validation.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
+import { PostsService } from './services/posts.service';
 import { LoginComponent } from './components/login/login.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 const appRoutes: Routes = [
     {path: '', component: FeedComponent},
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
         UserProfileComponent,
         PostDetailsComponent,
         RegisterComponent,
-        LoginComponent
+        LoginComponent,
+        AddPostComponent
     ],
     imports: [
         BrowserModule,
@@ -39,7 +42,7 @@ const appRoutes: Routes = [
         HttpModule,
         RouterModule.forRoot(appRoutes)
 ],
-providers: [ ValidationService, AuthService, AuthGuardService ],
+providers: [ ValidationService, AuthService, AuthGuardService, PostsService ],
     bootstrap
 :
 [AppComponent]

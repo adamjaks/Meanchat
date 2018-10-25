@@ -15,5 +15,7 @@ export class ValidationService {
         }
     }
 
-    //validate email
+    validateUsername(user) {
+
+    }
 }

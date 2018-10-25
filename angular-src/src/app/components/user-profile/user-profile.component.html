@@ -10,42 +10,17 @@
         </div>
     </div>
     <div class="col s9">
-        <div class="card-panel first">
-            <div class="post-details">
-                <div class="author-fullname">John Doe</div>
-                <p class="teaser">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia
-                    qui,
-                    voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi
-                    quia
-                    repudiandae voluptatem...
-                </p>
-                <span class="post-date deep-orange-text text-lighten-1">
-            2 weeks ago
-        </span>
+        <ng-container *ngFor="let post of posts">
+            <div *ngIf="loggedUser === post.creator_username" class="card-panel first">
+                <div class="post-details">
+                    <div class="author-fullname">{{ post.creator_username }}</div>
+                    <p class="teaser">{{ post.content }}</p>
+                    <span class="post-date deep-orange-text text-lighten-1">2 weeks ago</span>
+                </div>
+                <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
+                    <i class="material-icons">add</i>
+                </a>
             </div>
-            <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
-                <i class="material-icons">add</i>
-            </a>
-        </div>
-
-        <div class="card-panel">
-            <div class="post-details">
-                <div class="author-fullname">Jenny Doe</div>
-                <p class="teaser">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia
-                    qui,
-                    voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi
-                    quia
-                    repudiandae voluptatem...
-                </p>
-                <span class="post-date deep-orange-text text-lighten-1">
-            2 weeks ago
-        </span>
-            </div>
-            <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
-                <i class="material-icons">add</i>
-            </a>
-        </div>
+        </ng-container>
     </div>
 </div>

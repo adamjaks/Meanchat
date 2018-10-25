@@ -5,15 +5,14 @@
             <li>
                 <a [routerLink]="['/']"
                    [routerLinkActive]="['white-text', 'deep-orange']"
-                   [routerLinkActiveOptions]="{ exact: true }"
-                   class="deep-orange-text">
+                   [routerLinkActiveOptions]="{ exact: true }" class="deep-orange-text">
                     <i class="material-icons left">home</i>Home
                 </a>
             </li>
             <li>
                 <a *ngIf="authService.loggedIn()" [routerLink]="['/profile']"
                    [routerLinkActive]="['white-text', 'deep-orange']" class="deep-orange-text">
-                    <i class="material-icons left">person</i>Profile
+                    <i class="material-icons left">person</i>{{ authService.getUsername() }}
                 </a>
             </li>
             <li>
@@ -23,8 +22,7 @@
             </li>
             <li>
                 <a *ngIf="!authService.loggedIn()" [routerLink]="['/login']"
-                   [routerLinkActive]="['white-text', 'deep-orange']" class="deep-orange-text modal-trigger"
-                   href="#modal1">
+                   [routerLinkActive]="['white-text', 'deep-orange']" class="deep-orange-text modal-trigger">
                     <i class="material-icons left">arrow_forward</i>Login
                 </a>
             </li>
@@ -38,12 +36,3 @@
         </ul>
     </div>
 </nav>
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-</div>

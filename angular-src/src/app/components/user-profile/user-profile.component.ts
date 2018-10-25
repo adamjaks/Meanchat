@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
+import { PostsService } from "../../services/posts.service";
+
 @Component({
     selector: 'app-user-profile',
     templateUrl: './user-profile.component.html',
@@ -8,16 +10,27 @@ import { Router } from "@angular/router";
 })
 export class UserProfileComponent implements OnInit {
     user: Object;
-    constructor(private authService: AuthService, private router: Router) {}
+    posts: Object;
+    loggedUser: String;
+    constructor(private authService: AuthService, private router: Router, private postsService: PostsService) {}
 
     ngOnInit() {
+        this.loggedUser = JSON.parse(localStorage.getItem('user')).username;
+        this.postsService.getPosts().subscribe(response => {
+            this.posts = response.posts.reverse();
+        }),
+        err => {
+            console.log(err);
+            return false;
+        };
+
         this.authService.getProfile().subscribe(profile => {
            this.user = profile.user;
         }),
         err => {
             console.log(err);
             return false;
-        }
+        };
     }
 
 }
