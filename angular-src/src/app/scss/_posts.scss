@@ -1,6 +1,8 @@
 //feed and profile
 
-.card-panel { position: relative; margin: 2.4rem 0; }
+.card-panel { position: relative; margin: 2.4rem 0;
+  .btn-floating { margin: 0 .25rem; }
+}
 .author-fullname { font: { size: .9rem; weight: 700; }}
 .teaser { padding: 0; margin: 0; font-size: .9rem; }
 .post-date { font: { size: .8rem; } }

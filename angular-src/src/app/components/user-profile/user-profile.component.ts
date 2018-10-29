@@ -15,7 +15,7 @@ export class UserProfileComponent implements OnInit {
     constructor(private authService: AuthService, private router: Router, private postsService: PostsService) {}
 
     ngOnInit() {
-        this.loggedUser = JSON.parse(localStorage.getItem('user')).username;
+        this.loggedUser = JSON.parse(localStorage.getItem('user')).id;
         this.postsService.getPosts().subscribe(response => {
             this.posts = response.posts.reverse();
         }),

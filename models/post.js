@@ -6,8 +6,16 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    creator_username: {
+    creator_id: {
         type: String,
+        required: true
+    },
+    creator_name: {
+        type: String,
+        required: true
+    },
+    post_date: {
+        type: Number,
         required: true
     },
     rate: {

@@ -13,4 +13,19 @@ export class PostsService {
         return this.http.get('http://localhost:3000/posts/fetch', {headers: headers})
             .map(res => res.json());
     }
+
+    addPost(post) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('http://localhost:3000/posts/add', post, {headers: headers})
+            .map(res => res.json());
+    }
+
+    deletePost(id) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post(`http://localhost:3000/posts/delete/${id}`,{headers: headers})
+            .map(res => res.json());
+    }
+
 }

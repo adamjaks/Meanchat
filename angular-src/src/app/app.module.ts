@@ -7,19 +7,17 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {FeedComponent} from './components/feed/feed.component';
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
-import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ValidationService } from './services/validation.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { PostsService } from './services/posts.service';
 import { LoginComponent } from './components/login/login.component';
-import { AddPostComponent } from './components/add-post/add-post.component';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 const appRoutes: Routes = [
     {path: '', component: FeedComponent},
     {path: 'profile', component: UserProfileComponent, canActivate: [AuthGuardService]},
-    {path: 'post', component: PostDetailsComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'login', component: LoginComponent}
 ];
@@ -31,10 +29,9 @@ const appRoutes: Routes = [
         NavbarComponent,
         FeedComponent,
         UserProfileComponent,
-        PostDetailsComponent,
         RegisterComponent,
         LoginComponent,
-        AddPostComponent
+        TimeAgoPipe
     ],
     imports: [
         BrowserModule,
