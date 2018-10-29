@@ -3,6 +3,8 @@ import {ValidationService} from '../../services/validation.service';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 
+declare var M: any;
+
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
@@ -30,16 +32,16 @@ export class RegisterComponent implements OnInit {
         };
 
         if (!this.validationService.validateRegister(user)) {
-            console.log('Fill in all fields');
+            M.toast({html: 'All fields must be filled'});
             return false;
         }
 
         this.authService.registerUser(user).subscribe(data => {
             if (data.success) {
-                console.log('User registered');
+                M.toast({html: data.msg, classes: 'deep-orange' });
                 this.router.navigate(['/login']);
             } else {
-                console.log('User not registered');
+                M.toast({ html: data.msg });
             }
         });
     }

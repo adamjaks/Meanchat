@@ -3,6 +3,8 @@ import {AuthService} from "../../services/auth.service";
 import {PostsService} from "../../services/posts.service";
 import {Router} from '@angular/router';
 
+declare var M: any;
+
 @Component({
     selector: 'app-feed',
     templateUrl: './feed.component.html',
@@ -51,19 +53,19 @@ export class FeedComponent implements OnInit {
             };
             this.postsService.addPost(post).subscribe(data => {
                 if (data.success) {
-                    console.log('Post added', post);
+                    M.toast({html: data.msg, classes: 'deep-orange' });
                     this.postsService.getPosts().subscribe(response => {
                         this.posts = response.posts.reverse();
                         console.log(this.posts);
                     }),
                     err => {
-                        console.log(err);
+                        M.toast({html: err });
                         return false;
                     };
 
                     this.router.navigate(['/']);
                 } else {
-                    console.log('Post not added' + JSON.stringify(data));
+                    M.toast({ html: data.msg });
                     this.router.navigate(['/']);
                 }
             });
@@ -76,16 +78,16 @@ export class FeedComponent implements OnInit {
     deletePost(id) {
         this.postsService.deletePost(id).subscribe(data => {
             if (data.success) {
-                console.log('Post succesfully deleted');
+                M.toast({html: data.msg, classes: 'deep-orange' });
                 this.postsService.getPosts().subscribe(response => {
                     this.posts = response.posts.reverse();
                 }),
                 err => {
-                    console.log(err);
+                    M.toast({html: err });
                     return false;
                 };
             } else {
-                console.log('Post not deleted');
+                M.toast({html: data.msg });
             }
         });
     }

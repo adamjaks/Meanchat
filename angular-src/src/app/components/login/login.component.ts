@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {Router} from "@angular/router";
 
+declare var M: any;
+
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
@@ -28,10 +30,10 @@ export class LoginComponent implements OnInit {
         this.authService.authenticateUser(user).subscribe(data => {
             if (data.success) {
                 this.authService.storeUserData(data.token, data.user);
+                M.toast({html: data.msg, classes: 'deep-orange' });
                 this.router.navigate(['']);
-                console.log(`Logged as ${data.user.username}`)
             } else {
-                console.log('Not logged in');
+                M.toast({html: data.msg });
             }
         });
     }

@@ -21,7 +21,7 @@
         "styles.scss"
       ],
       "scripts": [
-
+        "app/js/main.js"
       ],
       "environments": {
         "source": "environments/environment.ts",

@@ -1,1 +1,1 @@
-alert('x');
+M.AutoInit();

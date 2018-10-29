@@ -13,9 +13,9 @@ router.post('/add', (req, res, next) => {
 
     Post.addPost(newPost, (err, post) => {
         if (err) {
-            res.json({success: false, msg: `Post: ${newPost}`});
+            res.json({success: false, msg: err._message });
         } else {
-            res.json({success: true, msg: 'Post added'});
+            res.json({success: true, msg: 'Post successfully added'});
         }
     });
 });
@@ -29,9 +29,9 @@ router.get('/fetch', (req, res, next) => {
 router.post('/delete/:id', (req, res, next) => {
     Post.deleteOne({ _id: req.params.id}, (err, obj) => {
         if (err) {
-            res.json({success: false, msg: `Not deleted`});
+            res.json({success: false, msg: err._message });
         } else {
-            res.json({success: true, msg: `Deleted post with id: ${req.params.id}`});
+            res.json({success: true, msg: 'Post successfully deleted'});
         }
     });
 });
