@@ -13,7 +13,8 @@ import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { PostsService } from './services/posts.service';
 import { LoginComponent } from './components/login/login.component';
-import {TimeAgoPipe} from 'time-ago-pipe';
+import { TimeAgoPipe } from 'time-ago-pipe';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 const appRoutes: Routes = [
     {path: '', component: FeedComponent},
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        InfiniteScrollModule
 ],
 providers: [ ValidationService, AuthService, AuthGuardService, PostsService ],
     bootstrap

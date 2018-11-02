@@ -1,1 +1,4 @@
 .nav-wrapper { padding-left: 1rem; }
+nav { position: relative; }
+.back { padding-left: 1rem; font-size: 1.8rem; cursor: pointer; position: absolute;
+  top: 50%; transform: translateY(-50%); }

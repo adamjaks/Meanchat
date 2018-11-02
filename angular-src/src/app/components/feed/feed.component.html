@@ -1,63 +1,55 @@
-<form (submit)="onAddPostSubmit()" *ngIf="authService.loggedIn()">
-    <div class="row">
-        <div class="input-field col s12 deep-orange-text">
-            <textarea id="textarea2" [(ngModel)]="content" name="content" class="materialize-textarea" data-length="280"></textarea>
-            <label for="textarea2" class="deep-orange-text">Add new post</label>
+<form (submit)="onAddPostSubmit()" *ngIf="authService.loggedIn()" class="add-post-form">
+    <div class="row valign-wrapper">
+        <div class="col s10">
+            <div class="input-field deep-orange-text">
+                <textarea id="textarea2" [(ngModel)]="content" name="content" class="materialize-textarea"></textarea>
+                <label for="textarea2" class="deep-orange-text">Add new post</label>
+            </div>
+        </div>
+        <div class="col s2">
+            <button class="btn right grey darken-4 sen-message" type="submit">Send
+                <i class="material-icons right">send</i>
+            </button>
         </div>
     </div>
-    <button type="submit" class="btn grey darken-4 white-text">Add</button>
 </form>
 
 <div *ngFor="let post of posts" class="card-panel first"
-     [ngClass]="{'deep-orange lighten-2 white-text' : authService.loggedIn() && post.creator_id === loggedUser}">
+     [ngClass]="{'own-post' : authService.loggedIn() && post.creator_id === loggedUser}">
     <div class="post-details">
         <div class="author-fullname">{{ post.creator_name }}</div>
         <p class="teaser">{{ post.content }}</p>
-        <span class="post-date"
-              [ngClass]="{'white-text' : authService.loggedIn() && post.creator_id === loggedUser,
-              'deep-orange-text text-lighten-1' : post.creator_id !== loggedUser}">
+        <span class="post-date deep-orange-text">
             {{ post.post_date | timeAgo }}
         </span>
     </div>
     <ng-container *ngIf="authService.loggedIn() && post.creator_id === loggedUser">
-        <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right"
-        (click)="deletePost(post._id)">
+        <a class="btn-floating btn-medium deep-orange darken-3 right"
+           (click)="deletePost(post._id)">
             <i class="material-icons">delete</i>
         </a>
-        <a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">
+        <a class="btn-floating btn-medium deep-orange right modal-trigger"
+           (click)="openEditModal(post._id, post.content)">
             <i class="material-icons">create</i>
         </a>
     </ng-container>
 </div>
 
-<!--<div class="card deep-orange lighten-2">-->
-    <!--<div class="card-content white-text">-->
-        <!--<p>-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia qui,-->
-            <!--voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi quia-->
-            <!--repudiandae voluptatem... <span class="deep-orange lighten-5 deep-orange-text">read more</span>-->
-        <!--</p>-->
-    <!--</div>-->
-    <!--<div class="card-action deep-orange lighten-1">-->
-        <!--<a href="#"><i class="material-icons deep-orange-text text-lighten-4 right">mode_edit</i></a>-->
-        <!--<a href="#"><i class="material-icons deep-orange-text text-lighten-4 right">delete_forever</i></a>-->
-    <!--</div>-->
-<!--</div>-->
-
-<!--<div class="card-panel deep-orange lighten-2 white-text">-->
-    <!--<div class="post-details">-->
-        <!--<div class="author-fullname">Ann Smith</div>-->
-        <!--<p class="teaser">-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum distinctio eum ipsa magni mollitia qui,-->
-            <!--voluptates. Accusamus adipisci aspernatur, blanditiis est, excepturi nulla odit, provident quasi quia-->
-            <!--repudiandae voluptatem...-->
-        <!--</p>-->
-        <!--<span class="post-date">-->
-            <!--2 weeks ago-->
-        <!--</span>-->
-    <!--</div>-->
-    <!--<a class="btn-floating btn-medium waves-effect waves-light grey darken-4 right">-->
-        <!--<i class="material-icons">add</i>-->
-    <!--</a>-->
-<!--</div>-->
-
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <form (submit)="onEditModalSubmit()">
+            <div class="row">
+                <div class="col s12">
+                    <div class="input-field deep-orange-text">
+                        <textarea id="textarea-edit" [(ngModel)]="contentEdited" name="contentEdited" class="materialize-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <button type="submit" class="btn grey darken-4 right">Confirm editing</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

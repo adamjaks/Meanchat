@@ -2,6 +2,7 @@
 
 .card-panel { position: relative; margin: 2.4rem 0;
   .btn-floating { margin: 0 .25rem; }
+  &.own-post { border-left: 4px solid #ff5722; }
 }
 .author-fullname { font: { size: .9rem; weight: 700; }}
 .teaser { padding: 0; margin: 0; font-size: .9rem; }

@@ -14,7 +14,11 @@ export class FeedComponent implements OnInit {
     posts: any;
     loggedUser: any;
     content: any;
+    modalId: any;
     post_date: any;
+    editModal: any;
+    editModalInstance: any;
+    contentEdited: any;
 
     constructor(private authService: AuthService, private postsService: PostsService,
                 private router: Router) {
@@ -22,6 +26,9 @@ export class FeedComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.editModal = document.querySelector('#edit-modal');
+        this.editModalInstance = M.Modal.init(this.editModal);
+
         this.loggedUser = localStorage.getItem('user') ?
             JSON.parse(localStorage.getItem('user')).id : '';
 
@@ -53,19 +60,18 @@ export class FeedComponent implements OnInit {
             };
             this.postsService.addPost(post).subscribe(data => {
                 if (data.success) {
-                    M.toast({html: data.msg, classes: 'deep-orange' });
+                    M.toast({html: `<i class="material-icons">check</i> ${data.msg}`, classes: 'white deep-orange-text' });
                     this.postsService.getPosts().subscribe(response => {
                         this.posts = response.posts.reverse();
-                        console.log(this.posts);
                     }),
                     err => {
-                        M.toast({html: err });
+                        M.toast({html: `<i class="material-icons">close</i> ${err}`, classes: 'grey'});
                         return false;
                     };
 
                     this.router.navigate(['/']);
                 } else {
-                    M.toast({ html: data.msg });
+                    M.toast({html: `<i class="material-icons">close</i> ${data.msg}`, classes: 'grey'});
                     this.router.navigate(['/']);
                 }
             });
@@ -78,18 +84,42 @@ export class FeedComponent implements OnInit {
     deletePost(id) {
         this.postsService.deletePost(id).subscribe(data => {
             if (data.success) {
-                M.toast({html: data.msg, classes: 'deep-orange' });
+                M.toast({html: `<i class="material-icons">check</i> ${data.msg}`, classes: 'white deep-orange-text' });
                 this.postsService.getPosts().subscribe(response => {
                     this.posts = response.posts.reverse();
                 }),
                 err => {
-                    M.toast({html: err });
+                    M.toast({html: `<i class="material-icons">close</i> ${err}`, classes: 'grey'});
                     return false;
                 };
             } else {
-                M.toast({html: data.msg });
+                M.toast({html: `<i class="material-icons">close</i> ${data.msg}`, classes: 'grey'});
             }
         });
+    }
+
+    onEditModalSubmit() {
+        this.editModalInstance.close();
+        this.postsService.editPost(this.modalId, this.contentEdited).subscribe(data => {
+            if (data.success) {
+                this.postsService.getPosts().subscribe(response => {
+                    this.posts = response.posts.reverse();
+                }),
+                    err => {
+                        M.toast({html: `<i class="material-icons">close</i> ${err}`, classes: 'grey'});
+                        return false;
+                    };
+                M.toast({html: `<i class="material-icons">check</i> ${data.msg}`, classes: 'white deep-orange-text' });
+            } else {
+
+            }
+        });
+    }
+
+    openEditModal(id, content) {
+        this.editModalInstance.open();
+        this.modalId = id;
+        this.editModal.querySelector('#textarea-edit').value = content;
     }
 
 }

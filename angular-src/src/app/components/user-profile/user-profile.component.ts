@@ -12,9 +12,12 @@ export class UserProfileComponent implements OnInit {
     user: Object;
     posts: Object;
     loggedUser: String;
+    isBusy: Boolean;
+
     constructor(private authService: AuthService, private router: Router, private postsService: PostsService) {}
 
     ngOnInit() {
+        this.isBusy = true;
         this.loggedUser = JSON.parse(localStorage.getItem('user')).id;
         this.postsService.getPosts().subscribe(response => {
             this.posts = response.posts.reverse();
@@ -33,4 +36,7 @@ export class UserProfileComponent implements OnInit {
         };
     }
 
+    ngAfterViewInit() {
+        this.isBusy = false;
+    }
 }

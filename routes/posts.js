@@ -36,4 +36,14 @@ router.post('/delete/:id', (req, res, next) => {
     });
 });
 
+router.post('/edit/:id', (req, res, next) => {
+    Post.updateOne({ _id: req.params.id}, { content: req.body.content }, (err, obj) => {
+        if (err) {
+            res.json({success: false, msg: err._message });
+        } else {
+            res.json({success: true, msg: 'Post successfully edited'});
+        }
+    });
+});
+
 module.exports = router;

@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
     onLogoutClick() {
         this.authService.logout();
-        M.toast({html: 'Logged out', classes: 'deep-orange' });
+        M.toast({html: `<i class="material-icons">check</i> Logged out`, classes: 'white deep-orange-text' });
         this.router.navigate(['/']);
     }
 

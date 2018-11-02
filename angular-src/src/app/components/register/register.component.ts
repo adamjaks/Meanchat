@@ -32,16 +32,16 @@ export class RegisterComponent implements OnInit {
         };
 
         if (!this.validationService.validateRegister(user)) {
-            M.toast({html: 'All fields must be filled'});
+            M.toast({html: `<i class="material-icons">close</i> All fields must be filled`, classes: 'grey'});
             return false;
         }
 
         this.authService.registerUser(user).subscribe(data => {
             if (data.success) {
-                M.toast({html: data.msg, classes: 'deep-orange' });
+                M.toast({html: `<i class="material-icons">check</i> ${data.msg}`, classes: 'white deep-orange-text' });
                 this.router.navigate(['/login']);
             } else {
-                M.toast({ html: data.msg });
+                M.toast({html: `<i class="material-icons">close</i> ${data.msg}`, classes: 'grey'});
             }
         });
     }

@@ -28,4 +28,12 @@ export class PostsService {
             .map(res => res.json());
     }
 
+    editPost(id, content) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post(`http://localhost:3000/posts/edit/${id}`,
+            {headers: headers, content: content})
+            .map(res => res.json());
+    }
+
 }

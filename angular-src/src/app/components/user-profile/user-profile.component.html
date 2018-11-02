@@ -1,17 +1,17 @@
-<div class="row">
+<div *ngIf="!isBusy" class="row">
     <div *ngIf="user" class="col s3">
         <div class="card-panel">
             <ul>
-                <li>Name: <span>{{ user.name }}</span></li>
-                <li>Username: <span>{{ user.username }}</span></li>
-                <li>Email: <span>{{ user.email }}</span></li>
-                <li>Post amount: <span>11</span></li>
+                <li>Name: <span class="right">{{ user.name }}</span></li>
+                <li>Username: <span class="right">{{ user.username }}</span></li>
+                <li>Email: <span class="right">{{ user.email }}</span></li>
+                <li>Post amount: <span class="right">[x]</span></li>
             </ul>
         </div>
     </div>
     <div class="col s9">
         <ng-container *ngFor="let post of posts">
-            <div *ngIf="loggedUser === post.creator_id" class="card-panel first">
+            <div *ngIf="loggedUser === post.creator_id" class="card-panel first own-post">
                 <div class="post-details">
                     <div class="author-fullname">{{ post.creator_name }}</div>
                     <p class="teaser">{{ post.content }}</p>
@@ -19,5 +19,17 @@
                 </div>
             </div>
         </ng-container>
+    </div>
+</div>
+
+<div *ngIf="isBusy" class="preloader-wrapper active">
+    <div class="spinner-layer spinner-yellow-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+    </div><div class="circle-clipper right">
+        <div class="circle"></div>
+    </div>
     </div>
 </div>
